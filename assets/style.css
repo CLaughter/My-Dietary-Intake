@@ -1,0 +1,27 @@
+html {
+  background-color: rgb(247, 220, 162);
+}
+
+body {
+  background-color: rgb(247, 220, 162);
+}
+
+#heading {
+  text-align: center;
+  background-color: rgb(112, 53, 53);
+  color: white;
+  padding: 5px;
+}
+
+.row {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.col {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
