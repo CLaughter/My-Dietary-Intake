@@ -27,3 +27,11 @@ h4 {
   margin-top: 5px;
   border-radius: 10px;
 }
+
+.card-title {
+  font-size: medium;
+}
+
+.form-group {
+  font-size: small;
+}

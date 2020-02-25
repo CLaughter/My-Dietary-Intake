@@ -17,7 +17,7 @@
   <body>
     <div id="heading">
       <h1>My Dietary Intake</h1>
-      <h5>Monitor Your Caloric/Fat/Carbs/Protein(g) Intake</h5>
+      <h5>Monitor Your Caloric/Fat/Carbs/Protein Intake</h5>
     </div>
 
     <div class="container">
@@ -27,7 +27,26 @@
             <div class="card-body">
               <h3 class="card-title">Enter Food Info</h3>
               <hr>
-
+              <div class="form-group">
+                <form>
+                  <label for="foodName"></label>
+                  <input
+                    type="text"
+                    id="foodName"
+                    placeholder="Enter Food Name"
+                  />
+                </form>
+              </div>
+              <div class="form-group">
+                <form>
+                  <label for="portion"></label>
+                  <input
+                    type="text"
+                    id="calories"
+                    placeholder="Enter Portion Size(oz)"
+                  />
+                </form>
+              </div>
               <div class="form-group">
                 <form>
                   <label for="calories"></label>
@@ -44,7 +63,7 @@
                   <input
                     type="text"
                     id="totalFat"
-                    placeholder="Enter Total Fat"
+                    placeholder="Enter Total Fat(g)"
                   />
                 </form>
               </div>
@@ -54,7 +73,7 @@
                   <input
                     type="text"
                     id="totalCarbs"
-                    placeholder="Enter Total Carbs"
+                    placeholder="Enter Total Carbs(g)"
                   />
                 </form>
               </div>
@@ -65,7 +84,7 @@
                   <input
                     type="text"
                     id="totalProtein"
-                    placeholder="Enter Total Protein"
+                    placeholder="Enter Total Protein(g)"
                   />
                 </form>
               </div>
@@ -81,9 +100,9 @@
                 <h3 class="card-title">Daily Intake</h3>
                 <hr>
                 <div class="dayCalories">Calories: </div>
-                <div class="dayFat">Fat: </div>
-                <div class="dayCarbs">Carbs: </div>
-                <div class="dayProtein">Protein: </div>
+                <div class="dayFat">Fat: (g)</div>
+                <div class="dayCarbs">Carbs: (g)</div>
+                <div class="dayProtein">Protein: (g)</div>
               </div>
             </div>
           </div>
@@ -94,9 +113,9 @@
                 <h3 class="card-title">Weekly Intake</h3>
                 <hr>
                 <div class="weekCalories">Calories: </div>
-                <div class="weekFat">Fat: </div>
-                <div class="weekCarbs">Carbs: </div>
-                <div class="weekProtein">Protein: </div>
+                <div class="weekFat">Fat: (g)</div>
+                <div class="weekCarbs">Carbs: (g)</div>
+                <div class="weekProtein">Protein: (g)</div>
               </div>
             </div>
           </div>
