@@ -4,4 +4,4 @@
 
 ### It then calculates those values and provides a cumulative daily and weekly total.
 
-## All the information is stored in a database allowing to persistance to review at a later date.
+### All the information is stored in a database allowing to persistance to review at a later date.
