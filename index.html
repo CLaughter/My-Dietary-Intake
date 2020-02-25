@@ -20,39 +20,87 @@
       <h5>Monitor Your Caloric/Fat/Carbs/Protein(g) Intake</h5>
     </div>
 
-    <div class="row">
-      <div class="col-md-3">
-        <h4>Enter Food Info</h4>
-        <div class="container1">
-            <form>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card1">
+            <div class="card-body">
+              <h3 class="card-title">Enter Food Info</h3>
+              <hr>
+
               <div class="form-group">
-                <label for="calories"></label>
-                <input type="text" class="form-control" id="calories">
-            </form>
-            <div class="form-group">
-              <label for="totalFat"></label>
-              <input type="text" class="form-control" id="totalFat">
-            <form>
+                <form>
+                  <label for="calories"></label>
+                  <input
+                    type="text"
+                    id="calories"
+                    placeholder="Enter Total Calories"
+                  />
+                </form>
+              </div>
               <div class="form-group">
-                <label for="totalCarbs"></label>
-                <input type="text" class="form-control" id="totalCarbs">
-            </form>
-            <form>
+                <form>
+                  <label for="totalFat"></label>
+                  <input
+                    type="text"
+                    id="totalFat"
+                    placeholder="Enter Total Fat"
+                  />
+                </form>
+              </div>
               <div class="form-group">
-                <label for="totalProtein"></label>
-                <input type="text" class="form-control" id="totalProtein">
-            </form>
-          <br>
-          <button type="submit" class="btn btn-primary">Submit</button>
+                <form>
+                  <label for="totalCarbs"></label>
+                  <input
+                    type="text"
+                    id="totalCarbs"
+                    placeholder="Enter Total Carbs"
+                  />
+                </form>
+              </div>
+
+              <div class="form-group">
+                <form>
+                  <label for="totalProtein"></label>
+                  <input
+                    type="text"
+                    id="totalProtein"
+                    placeholder="Enter Total Protein"
+                  />
+                </form>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-3">
-        <h4>Daily Intake</h4>
-      </div>
+          <div class="col-md-3">
+            <div class="card2">
+              <div class="card-body">
+                <h3 class="card-title">Daily Intake</h3>
+                <hr>
+                <div class="dayCalories">Calories: </div>
+                <div class="dayFat">Fat: </div>
+                <div class="dayCarbs">Carbs: </div>
+                <div class="dayProtein">Protein: </div>
+              </div>
+            </div>
+          </div>
 
-      <div class="col-md-3">
-        <h4>Weekly Intake</h4>
+          <div class="col-md-3">
+            <div class="card3">
+              <div class="card-body">
+                <h3 class="card-title">Weekly Intake</h3>
+                <hr>
+                <div class="weekCalories">Calories: </div>
+                <div class="weekFat">Fat: </div>
+                <div class="weekCarbs">Carbs: </div>
+                <div class="weekProtein">Protein: </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
