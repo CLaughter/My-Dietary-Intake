@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dietary Intake</title>
 
-    <link <link rel="stylesheet" type="text/css" href="./assets/reboot.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/reboot.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="./assets/style.css"
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
   <body>
+    <!-- Create navbar -->
+
     <div id="heading">
       <h1>My Dietary Intake</h1>
-      <h5>Monitor Your Caloric/Fat/Carbs/Protein Intake</h5>
+      <h5>Monitor Your Calories/Fat/Carbs/Protein</h5>
     </div>
 
+    <!-- Food input card -->
     <div class="container">
       <div class="row">
         <div class="col-md-5">
@@ -33,6 +36,7 @@
                   <input
                     type="text"
                     id="foodName"
+                    class="form-control"
                     placeholder="Enter Food Name"
                   />
                 </form>
@@ -41,8 +45,9 @@
                 <form>
                   <label for="portion"></label>
                   <input
-                    type="text"
-                    id="calories"
+                    type="number"
+                    id="portion"
+                    class="form-control"
                     placeholder="Enter Portion Size(oz)"
                   />
                 </form>
@@ -51,8 +56,9 @@
                 <form>
                   <label for="calories"></label>
                   <input
-                    type="text"
+                    type="number"
                     id="calories"
+                    class="form-control"
                     placeholder="Enter Total Calories"
                   />
                 </form>
@@ -61,8 +67,9 @@
                 <form>
                   <label for="totalFat"></label>
                   <input
-                    type="text"
+                    type="number"
                     id="totalFat"
+                    class="form-control"
                     placeholder="Enter Total Fat(g)"
                   />
                 </form>
@@ -71,8 +78,9 @@
                 <form>
                   <label for="totalCarbs"></label>
                   <input
-                    type="text"
+                    type="number"
                     id="totalCarbs"
+                    class="form-control"
                     placeholder="Enter Total Carbs(g)"
                   />
                 </form>
@@ -84,43 +92,49 @@
                   <input
                     type="text"
                     id="totalProtein"
+                    class="form-control"
                     placeholder="Enter Total Protein(g)"
                   />
                 </form>
               </div>
 
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Save</button>
             </div>
           </div>
         </div>
 
+        <!-- Daily intake card -->
         <div class="col-md-3">
           <div class="card2">
             <div class="card-body">
               <h3 class="card-title">Daily Intake</h3>
               <hr />
-              <div class="dayCalories">Calories:</div>
-              <div class="dayFat">Fat: (g)</div>
-              <div class="dayCarbs">Carbs: (g)</div>
-              <div class="dayProtein">Protein: (g)</div>
+              <div class="dayCalories"></div>
+              <div class="dayFat"></div>
+              <div class="dayCarbs"></div>
+              <div class="dayProtein"></div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-3">
+        <!-- Weekly intake card -->
+        <div class="col-md-3" id="weeklyCard">
           <div class="card3">
             <div class="card-body">
               <h3 class="card-title">Weekly Intake</h3>
               <hr />
-              <div class="weekCalories">Calories:</div>
-              <div class="weekFat">Fat: (g)</div>
-              <div class="weekCarbs">Carbs: (g)</div>
-              <div class="weekProtein">Protein: (g)</div>
+              <div class="weekCalories"></div>
+              <div class="weekFat"></div>
+              <div class="weekCarbs"></div>
+              <div class="weekProtein"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <footer class="footer fixed-bottom mt-5 p3 text-center bg-light">
+      claughter@github.io &copy
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -137,5 +151,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./js/app.js"></script>
   </body>
 </html>

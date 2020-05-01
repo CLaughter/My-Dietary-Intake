@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(247, 220, 162);
+  background: url("../assets/images/zzz.png") no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#heading {
+  text-align: center;
+  background-color: rgb(112, 53, 53);
+  color: white;
+  padding: 5px;
+}
+
+h4 {
+  text-align: center;
+}
+
+.card-body {
+  margin-top: 15px;
+}
+
+.card-columns {
+  border: 1px solid black;
+  margin-top: 5px;
+  padding: 3px;
+  width: 50rem;
+}
+
+.card1,
+.card2,
+.card3 {
+  background-color: rgb(200, 202, 185);
+  margin-top: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+}
+
+.card3 {
+  margin-bottom: 5px;
+}
+
+.card-title {
+  font-size: medium;
+}
+
+.form-group {
+  font-size: small;
+}
+
+#weeklyCard {
+  margin-bottom: 39px;
+}
