@@ -10,17 +10,39 @@ const proteinInput = document.querySelector("#totalProtein");
 const saveBtn = document.querySelector(".btn");
 saveBtn.addEventListener("click", getInput);
 
-function getInput() {
+function getInput(e) {
   let foodInputLower = foodInput.value.toLowerCase();
   let foodData = [
     {
-      food: `${foodInputLower}`,
+      foodName: `${foodInputLower}`,
       calories: `${caloriesInput.value}`,
       fat: `${fatInput.value}`,
       carbs: `${carbsInput.value}`,
       protein: `${proteinInput.value}`,
     },
   ];
+
+  // This works but rewrite each and only displays 1
+  // document.querySelector(".dayCard").innerHTML =
+  //   (foodData[0].calories,
+  //   foodData[0].fat,
+  //   foodData[0].carbs,
+  //   foodData[0].protein);
+
+  // Set entire input field to a variable
+  // let allData = {
+  //   document.querySelector(".dayCalories").innerHTML =
+  //   "Calories: " + foodData[0].calories + "(g)",
+  // document.querySelector(".dayFat").innerHTML =
+  //   "Fat: " + foodData[0].fat + "(g)",
+  // document.querySelector(".dayCarbs").innerHTML =
+  //   "Carbs: " + foodData[0].carbs + "(g)",
+  // document.querySelector(".dayProtein").innerHTML =
+  //   "Protein: " + foodData[0].protein + "(g)",
+  // }
+
+  // document.querySelector(".dayCard").innerHTML = allData; // unexpected token .
+  //  --------------------------------------------------
 
   // display in daily card the cumulative sum of each cals/fat/carb/prot
   document.querySelector(".dayCalories").innerHTML =
@@ -32,7 +54,7 @@ function getInput() {
   document.querySelector(".dayProtein").innerHTML =
     "Protein: " + foodData[0].protein + "(g)";
 
-  // display in weekly card the cumulative sum of each cals/fat/carb/prot
+  // // display in weekly card the cumulative sum of each cals/fat/carb/prot
   document.querySelector(".weekCalories").innerHTML =
     "Calories: " + foodData[0].calories + "(g)";
   document.querySelector(".weekFat").innerHTML =
@@ -42,46 +64,33 @@ function getInput() {
   document.querySelector(".weekProtein").innerHTML =
     "Protein: " + foodData[0].protein + "(g)";
 
+  // ------------------------------------------------------
+  /* THE FOLLOWING IS TO STORE REFERENCE DATA TO FROM A SEARCH FUNCTION TO BE ADDED LATER, NOT PART OF THE DAILY/WEEKLY CARDS */
   // Store foodName in LS with associated nutritional values
-
-  // Store daily totals to LS
-
-  // Store weekly totals to LS
-
-  // If foodName does not exist, add user input to LS and push to array. Else, grab array and set to variable
-  let foodDataArr;
-  if (localStorage.getItem(foodInputLower) === null) {
-    // localStorage.setItem("foodDataArr", JSON.stringify(foodData));
-    foodDataArr = [];
+  // Check if foodName does not exist
+  if (localStorage.getItem(foodInputLower) != foodInputLower) {
+    localStorage.setItem(
+      "Food Name",
+      JSON.stringify(
+        foodData[0].foodName,
+        foodData[0].calories,
+        foodData[0].fat,
+        foodData[0].carbs,
+        foodData[0].protein
+      )
+    );
+    console.log("Item added");
+    // If foodName does exist
+  } else if (localStorage.getItem(foodInputLower) === foodInputLower) {
+    alert("Item already exists");
   } else {
-    foodDataArr = JSON.parse(localStorage.getItem("foodDataArr"));
+    alert("There is an error");
   }
+  // ------------------------------------------------------
 
-  // Push new data to existing array
-  foodDataArr.push(foodData);
+  // Store cumulative daily totals to LS
 
-  localStorage.getItem(foodData);
-  console.log(foodData);
-
-  if (foodDataArr === null) {
-    console.log("Not in LS");
-  } else {
-    console.log(foodDataArr);
-  }
-
-  // localStorage.setItem("Food", `${foodInputLower}`);
-  // localStorage.setItem("Calories", caloriesInput);
-  // localStorage.setItem("Fat", `${fatInput}`);
-  // localStorage.setItem("Carbs", `${carbsInput}`);
-  // localStorage.setItem("Protein", `${proteinInput}`);
-
-  // Display data in daily card
-  // console.log(foodInputLower);
-  // console.log(portionInput.value);
-  // console.log(caloriesInput.value);
-  // console.log(fatInput.value);
-  // console.log(carbsInput.value);
-  // console.log(proteinInput.value);
+  // Store cumulative weekly totals to LS
 
   // Clear input fields after click event
   foodInput.value = "";
@@ -90,4 +99,6 @@ function getInput() {
   fatInput.value = "";
   carbsInput.value = "";
   proteinInput.value = "";
+
+  e.preventDefault;
 }
