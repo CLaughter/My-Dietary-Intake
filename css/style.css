@@ -52,3 +52,11 @@ h4 {
 #weeklyCard {
   margin-bottom: 39px;
 }
+
+ul {
+  list-style-type: none;
+}
+
+h3 {
+  text-align: center;
+}
